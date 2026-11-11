@@ -9,17 +9,19 @@
 
 <h2>Registro de productos</h2>
 
-<label>Nombre del producto:</label>
-<input type="text">
+<form id="formulario-producto">
+	<label for="nombre-producto">Nombre del producto:</label>
+	<input id="nombre-producto" name="nombre" type="text" required>
 
-<br><br>
+	<br><br>
 
-<label>Cantidad:</label>
-<input type="number">
+	<label for="cantidad-producto">Cantidad:</label>
+	<input id="cantidad-producto" name="cantidad" type="number" min="1" step="1" required>
 
-<br><br>
+	<br><br>
 
-<button>Registrar producto</button>
+	<button type="submit">Registrar producto</button>
+</form>
 
 <h2>Listado de productos</h2>
 
@@ -29,16 +31,18 @@
 <th>Cantidad</th>
 </tr>
 
-<tr>
-<td>Computador</td>
-<td>10</td>
-</tr>
-
-<tr>
-<td>Mouse</td>
-<td>20</td>
-</tr>
+<tbody id="lista-productos">
+	<tr>
+		<td>Computador</td>
+		<td>10</td>
+	</tr>
+	<tr>
+		<td>Mouse</td>
+		<td>20</td>
+	</tr>
+</tbody>
 </table>
 
+<script src="productos.js" defer></script>
 </body>
 </html>
