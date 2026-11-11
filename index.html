@@ -1,44 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Inventario de Tienda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventario</title>
+    <link rel="stylesheet" href="clientes.css">
+    <script src="clientes.js" defer></script>
 </head>
 <body>
+    <h1>Sistema de Inventario</h1>
 
-<h1>Sistema de Inventario</h1>
+    <h2>Registro de productos</h2>
+    <label>Nombre del producto:</label>
+    <input type="text">
+    <br><br>
+    <label>Cantidad:</label>
+    <input type="number">
+    <br><br>
+    <button type="button">Registrar producto</button>
 
-<h2>Registro de productos</h2>
+    <h2>Listado de productos</h2>
+    <table border="1">
+        <tr><th>Producto</th><th>Cantidad</th></tr>
+        <tr><td>Computador</td><td>10</td></tr>
+        <tr><td>Mouse</td><td>20</td></tr>
+    </table>
 
-<label>Nombre del producto:</label>
-<input type="text">
+    <h2>Registro de clientes</h2>
+    <form id="client-form">
+        <label for="client-name">Nombre:</label>
+        <input id="client-name" name="name" type="text" required>
+        <br><br>
+        <label for="client-email">Correo:</label>
+        <input id="client-email" name="email" type="email" required>
+        <br><br>
+        <label for="client-phone">Teléfono:</label>
+        <input id="client-phone" name="phone" type="tel" required>
+        <br><br>
+        <button type="submit">Registrar cliente</button>
+    </form>
 
-<br><br>
-
-<label>Cantidad:</label>
-<input type="number">
-
-<br><br>
-
-<button>Registrar producto</button>
-
-<h2>Listado de productos</h2>
-
-<table border="1">
-<tr>
-<th>Producto</th>
-<th>Cantidad</th>
-</tr>
-
-<tr>
-<td>Computador</td>
-<td>10</td>
-</tr>
-
-<tr>
-<td>Mouse</td>
-<td>20</td>
-</tr>
-</table>
-
+    <h2>Listado de clientes</h2>
+    <table border="1">
+        <thead>
+            <tr><th>Nombre</th><th>Correo</th><th>Teléfono</th></tr>
+        </thead>
+        <tbody id="client-list"></tbody>
+    </table>
 </body>
 </html>
